@@ -6,38 +6,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Standard Calculator" Height="500" Width="420">
+        Title="Standard Calculator" Height="380" Width="285">
     <Grid>
-        <TextBox x:Name="txtResult" Width="370" Height="80" VerticalAlignment="Top" Margin="2,40,10,20" IsReadOnly="True" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" FontSize="60"/>
-        <Label x:Name="lblInput" Content="Label" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="370" Margin="2,10,10,20"/>
-        <Grid>
+       
+        
+        <Grid Background="Honeydew">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1.4*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height=".5*"/>
             </Grid.RowDefinitions>
-            <Button x:Name="buttonMod" Content="Mod" Click="buttonMod_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="-295,0,10,150" FontSize="20" />
-            <Button x:Name="buttonClear" Content="C" Click="buttonClear_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="-95,0,10,150" FontSize="20"/>
-            <Button x:Name="Back" Content="←" Click="buttonBack_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="105,0,10,150" FontSize="25"/>
-            <Button  x:Name="buttonDivide" Content="/" Click="buttonDivide_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="305,0,10,150" FontSize="20"/>
-            <Button x:Name ="button7" Content="7" Click="button7_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="-295,0,10,30" FontSize="20"/>
-            <Button x:Name="button8" Content="8" Click="button8_Click" Width="70" Height="50" HorizontalAlignment="Center"   Margin="-95,0,10,30" FontSize="20"/>
-            <Button x:Name="button9" Content="9" Click="button9_Click" Width ="70" Height="50" HorizontalAlignment="Center"  Margin="105,0,10,30" FontSize="20"/>
-            <Button x:Name ="buttonTimes" Content="*" Click="buttonTimes_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="305,0,10,30" FontSize="20"/>
-            <Button x:Name="button4" Content="4" Click="button4_Click" Width="70" Height="50" HorizontalAlignment="Center"  Margin="-295,0,10,-90" FontSize="20"/>
-            <Button x:Name="button5" Content="5" Click="button5_Click" Width="70" Height="50" HorizontalAlignment="Center"   Margin="-95,0,10,-90" FontSize="20"/>
-            <Button x:Name="button6" Content="6" Click="button6_Click"  Width="70"  Height="50" HorizontalAlignment="Center"  Margin="105,0,10,-90" FontSize="20"/>
-            <Button x:Name="buttonMinus" Content="-" Click="buttonMinus_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="305,0,10,-90" FontSize="20"/>
-            <Button x:Name="button1" Content="1" Click="button1_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="-295,0,10,-210" FontSize="20"/>
-            <Button x:Name="button2" Content="2" Click="button2_Click" Width="70" Height="50" HorizontalAlignment="Center"  Margin="-95,0,10,-210" FontSize="20"/>
-            <Button x:Name="button3" Content="3" Click="button3_Click" Width="70" Height="50" HorizontalAlignment="Center"   Margin="105,0,10,-210" FontSize="20"/>
-            <Button x:Name="buttonPlus" Content="+" Click="buttonPlus_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="305,0,10,-210" FontSize="20"/>
-            <Button x:Name="button0" Content="0" Click="button0_Click" Width="70" Height="50" HorizontalAlignment="Center"  Margin ="-95,0,10,-330" FontSize="20"/>
-            <Button x:Name="buttonDecimal" Content="." Click="buttonDecimal_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="105,0,10,-330" FontSize="20"/>
-            <Button x:Name="buttonEqual" Content="=" Click="buttonEqual_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="305,0,10,-330" FontSize="20"/>
-            <Button x:Name="plusMinus" Content="±" Click="plusMinus_Click" Width="70" Height="50" HorizontalAlignment="Center" Margin="-295,0,10,-330" FontSize="20"/>
+            <Label x:Name="lblInput" Grid.Row="0" Grid.ColumnSpan="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" VerticalAlignment="Top" Width="250"  Height="25" Margin="0,1,0,0"  />
+            <TextBox x:Name="txtResult" Grid.Row="0" Grid.ColumnSpan="4" Width="250" Height="40" VerticalAlignment="Top"  IsReadOnly="True" Margin="0,28,0,0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="30" BorderBrush="Black" BorderThickness="1"/>
+            <Button x:Name="buttonMod" Grid.Row="1" Grid.Column="0" Content="Mod" Click="buttonMod_Click" Width="60" Height="40" HorizontalAlignment="Center" FontSize="20" />
+            <Button x:Name="buttonClear" Content="C" Grid.Row="1" Grid.Column="1" Click="buttonClear_Click" Width="60" Height="40" HorizontalAlignment="Center"  FontSize="20"/>
+            <Button x:Name="Back" Content="←" Grid.Row="1" Grid.Column="2" Click="buttonBack_Click" Width="60" Height="40" HorizontalAlignment="Center"  FontSize="25"/>
+            <Button  x:Name="buttonDivide" Content="/" Grid.Row="1" Grid.Column="3" Click="buttonDivide_Click" Width="60" Height="40" HorizontalAlignment="Center" FontSize="20"/>
+            <Button x:Name ="button7" Content="7" Grid.Row="2" Grid.Column="0" Click="button7_Click" Width="60" Height="40" HorizontalAlignment="Center" FontSize="20"/>
+            <Button x:Name="button8" Content="8" Grid.Row="2" Grid.Column="1" Click="button8_Click" Width="60" Height="40" HorizontalAlignment="Center"  FontSize="20"/>
+            <Button x:Name="button9" Content="9" Grid.Row="2" Grid.Column="2" Click="button9_Click" Width ="60" Height="40" HorizontalAlignment="Center"  FontSize="20"/>
+            <Button x:Name ="buttonTimes" Content="*" Grid.Row="2" Grid.Column="3" Click="buttonTimes_Click" Width="60" Height="40" HorizontalAlignment="Center" FontSize="20"/>
+            <Button x:Name="button4" Content="4" Grid.Row="3" Grid.Column="0" Click="button4_Click" Width="60" Height="40" HorizontalAlignment="Center"   FontSize="20"/>
+            <Button x:Name="button5" Content="5" Grid.Row="3" Grid.Column="1" Click="button5_Click" Width="60" Height="40" HorizontalAlignment="Center"   FontSize="20"/>
+            <Button x:Name="button6" Content="6" Grid.Row="3" Grid.Column="2" Click="button6_Click"  Width="60"  Height="40" HorizontalAlignment="Center"  FontSize="20"/>
+            <Button x:Name="buttonMinus" Content="-" Grid.Row="3" Grid.Column="3" Click="buttonMinus_Click" Width="60" Height="40" HorizontalAlignment="Center"  FontSize="20"/>
+            <Button x:Name="button1" Content="1" Grid.Row="4" Grid.Column="0" Click="button1_Click" Width="60" Height="40" HorizontalAlignment="Center"  FontSize="20"/>
+            <Button x:Name="button2" Content="2" Grid.Row="4" Grid.Column="1" Click="button2_Click" Width="60" Height="40" HorizontalAlignment="Center"  FontSize="20"/>
+            <Button x:Name="button3" Content="3" Grid.Row="4" Grid.Column="2" Click="button3_Click" Width="60" Height="40" HorizontalAlignment="Center"    FontSize="20"/>
+            <Button x:Name="buttonPlus" Content="+" Grid.Row="4" Grid.Column="3" Click="buttonPlus_Click" Width="60" Height="40" HorizontalAlignment="Center"  FontSize="20"/>
+            <Button x:Name="button0" Content="0" Grid.Row="5" Grid.Column="1" Click="button0_Click" Width="60" Height="40" HorizontalAlignment="Center" FontSize="20"/>
+            <Button x:Name="buttonDecimal" Grid.Row="5" Grid.Column="2" Content="." Click="buttonDecimal_Click" Width="60" Height="40" HorizontalAlignment="Center" FontSize="20"/>
+            <Button x:Name="buttonEqual" Grid.Row="5" Grid.Column="3" Content="=" Click="buttonEqual_Click" Width="60" Height="40" HorizontalAlignment="Center" FontSize="20"/>
+            <Button x:Name="plusMinus" Grid.Row="5" Grid.Column="0" Content="±" Click="plusMinus_Click" Width="60" Height="40" HorizontalAlignment="Center" FontSize="20"/>
+            <Label x:Name="lblDate"  Grid.Row="6" Grid.ColumnSpan="4" HorizontalContentAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
-        <Label x:Name="lblDate" Content ="Label" HorizontalContentAlignment="Center" Margin="20,435,26,3"/>
+        
     </Grid>
 </Window>

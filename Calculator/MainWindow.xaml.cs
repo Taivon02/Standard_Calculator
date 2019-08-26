@@ -49,7 +49,7 @@ namespace Calculator
             if (txtResult.Text.Equals("" + 0) || changeValue == true)
             {
                 txtResult.Text = String.Empty;
-                txtResult.FontSize = 60;
+                txtResult.FontSize = 30;
             }
             //Max of 16 numbers
             if (txtResult.Text.Length < 16)
@@ -57,7 +57,7 @@ namespace Calculator
                 txtResult.Text += 8;
                 //Decreasing font size to fit all of the numbers in the textbox
                 if (txtResult.Text.Length > 10 && txtResult.Text.Length <= 16)
-                    txtResult.FontSize -= 5;
+                    txtResult.FontSize -= 1;
             }
             //Calculating the user's input based on value in textbox
                  userInput = Convert.ToDouble(txtResult.Text);
@@ -71,14 +71,14 @@ namespace Calculator
             if (txtResult.Text.Equals("" + 0) || changeValue == true)
             {
                 txtResult.Text = String.Empty;
-                txtResult.FontSize = 60;
+                txtResult.FontSize = 30;
             }
             if (txtResult.Text.Length < 16)
             {
                 txtResult.Text += 7;
 
                 if (txtResult.Text.Length > 10 && txtResult.Text.Length <= 16)
-                    txtResult.FontSize -= 5;
+                    txtResult.FontSize -= 1;
             }
 
                 userInput = Convert.ToDouble(txtResult.Text);
@@ -233,14 +233,14 @@ namespace Calculator
             if (txtResult.Text.Equals("" + 0) || changeValue == true)
             {
                 txtResult.Text = String.Empty;
-                txtResult.FontSize = 60;
+                txtResult.FontSize = 30;
             }
             if (txtResult.Text.Length < 16)
             {
                 txtResult.Text += 1;
 
                 if (txtResult.Text.Length > 10 && txtResult.Text.Length <= 16)
-                    txtResult.FontSize -= 5;
+                    txtResult.FontSize -= 1;
             }
        
               userInput = Convert.ToDouble(txtResult.Text);
@@ -252,14 +252,14 @@ namespace Calculator
             if (txtResult.Text.Equals("" + 0) || changeValue == true)
             {
                 txtResult.Text = String.Empty;
-                txtResult.FontSize = 60;
+                txtResult.FontSize = 30;
             }
             if (txtResult.Text.Length < 16)
             {
                 txtResult.Text += 2;
 
                 if (txtResult.Text.Length > 10 && txtResult.Text.Length <= 16)
-                    txtResult.FontSize -= 5;
+                    txtResult.FontSize -= 1;
             }
        
                  userInput = Convert.ToDouble(txtResult.Text);
@@ -271,7 +271,7 @@ namespace Calculator
             if (txtResult.Text.Equals("" + 0) || changeValue == true)
             {
                 txtResult.Text = String.Empty;
-                txtResult.FontSize = 60;
+                txtResult.FontSize = 30;
             }
 
             if (txtResult.Text.Length < 16)
@@ -279,7 +279,7 @@ namespace Calculator
                 txtResult.Text += 3;
 
                 if (txtResult.Text.Length > 10 && txtResult.Text.Length <= 16)
-                    txtResult.FontSize -= 5;
+                    txtResult.FontSize -= 1;
             }
 
              userInput = Convert.ToDouble(txtResult.Text);
@@ -291,14 +291,14 @@ namespace Calculator
             if (txtResult.Text.Equals("" + 0) || changeValue == true)
             {
                 txtResult.Text = String.Empty;
-                txtResult.FontSize = 60;
+                txtResult.FontSize =30;
             }
             if (txtResult.Text.Length < 16)
             {
                 txtResult.Text += 4;
 
                 if (txtResult.Text.Length > 10 && txtResult.Text.Length <= 16)
-                    txtResult.FontSize -= 5;
+                    txtResult.FontSize -= 1;
             }
             
              userInput = Convert.ToDouble(txtResult.Text);
@@ -310,14 +310,14 @@ namespace Calculator
             if (txtResult.Text.Equals("" + 0) || changeValue == true)
             {
                 txtResult.Text = String.Empty;
-                txtResult.FontSize = 60;
+                txtResult.FontSize = 30;
             }
             if (txtResult.Text.Length < 16)
             {
                 txtResult.Text += 5;
 
                 if (txtResult.Text.Length > 10 && txtResult.Text.Length <= 16)
-                    txtResult.FontSize -= 5;
+                    txtResult.FontSize -= 1;
             }
             
             userInput = Convert.ToDouble(txtResult.Text);
@@ -329,14 +329,14 @@ namespace Calculator
             if (txtResult.Text.Equals("" + 0) || changeValue == true)
             {
                 txtResult.Text = String.Empty;
-                txtResult.FontSize = 60;
+                txtResult.FontSize = 30;
             }
             if (txtResult.Text.Length < 16)
             {
                 txtResult.Text += 6;
 
                 if (txtResult.Text.Length > 10 && txtResult.Text.Length <= 16)
-                    txtResult.FontSize -= 5;
+                    txtResult.FontSize -= 1;
             }
             
                 userInput = Convert.ToDouble(txtResult.Text);
@@ -348,14 +348,14 @@ namespace Calculator
             if (txtResult.Text.Equals("" + 0) || changeValue == true)
             {
                 txtResult.Text = String.Empty;
-                txtResult.FontSize = 60;
+                txtResult.FontSize = 30;
             }
             if (txtResult.Text.Length < 16)
             {
                 txtResult.Text += 9;
 
                 if (txtResult.Text.Length > 10 && txtResult.Text.Length <= 16)
-                    txtResult.FontSize -= 5;
+                    txtResult.FontSize -= 1;
             }
             
                userInput = Convert.ToDouble(txtResult.Text);
@@ -391,7 +391,7 @@ namespace Calculator
                     case '%':
                         if (userInput == 0 || userInput < 0)
                         {
-                            txtResult.FontSize = 30;
+                            txtResult.FontSize = 15;
                             txtResult.Text = "Result is undefined";
                             //Resetting count to perform a new arithmetic sequence
                             count = 1;
@@ -409,7 +409,7 @@ namespace Calculator
                     case '/':
                         if (userInput == 0 || userInput < 0)
                         {
-                            txtResult.FontSize = 30;
+                            txtResult.FontSize = 15;
                             if (userInput == 0)
                             {
                                 txtResult.Text = "Cannot divide by zero";
@@ -451,17 +451,17 @@ namespace Calculator
                     input = Convert.ToString(result);
                     if (input.Length <= 10)
                     {
-                        txtResult.FontSize = 60;
+                        txtResult.FontSize = 30;
                     }
                     else
                     {
                         if (input.Length > 10 && input.Length <= 16)
                         {
-                            txtResult.FontSize = 60 - (input.Length - 10) * 5;
+                            txtResult.FontSize = 30 - (input.Length - 10) * 5;
                         }
                         else if(input.Length > 16)
                         {
-                            txtResult.FontSize = 30;
+                            txtResult.FontSize = 15;
                         }
                     }
                     txtResult.Text = "" + result;
@@ -486,7 +486,7 @@ namespace Calculator
                     case '%':
                         if (userInput == 0 || userInput < 0)
                         {
-                            txtResult.FontSize = 30;
+                            txtResult.FontSize = 15;
                             txtResult.Text = "Result is undefined";
                             count = 1;
                             userInput = result;
@@ -500,7 +500,7 @@ namespace Calculator
                     case '/':
                         if (userInput == 0 || userInput < 0)
                         {
-                            txtResult.FontSize = 30;
+                            txtResult.FontSize = 15;
                             if (userInput == 0){
                                 txtResult.Text = "Cannot divide by zero";
                                 count = 1;
@@ -532,17 +532,17 @@ namespace Calculator
                     input = Convert.ToString(result);
                     if (input.Length <= 10)
                     {
-                        txtResult.FontSize = 60;
+                        txtResult.FontSize = 30;
                     }
                     else
                     {
                         if (input.Length > 10 && input.Length <= 16)
                         {
-                            txtResult.FontSize = 60 - (input.Length - 10) * 5;
+                            txtResult.FontSize = 30 - (input.Length - 10) * 5;
                         }
                         else if (input.Length > 16)
                         {
-                            txtResult.FontSize = 30;
+                            txtResult.FontSize = 15;
                         }
                     }
                     txtResult.Text = "" + result;
@@ -651,7 +651,7 @@ namespace Calculator
         private void buttonClear_Click(object sender, RoutedEventArgs e)
         {
             //Clearing the textbox and label and resetting all variables
-            txtResult.FontSize = 60;
+            txtResult.FontSize = 30;
             txtResult.Text = "" + 0;
             lblInput.Content = "";
             userInput = 0;
@@ -663,7 +663,7 @@ namespace Calculator
         {
            //Increases the font size as textbox length goes down
             if(txtResult.Text.Length > 10 && txtResult.Text.Length <= 16)
-                txtResult.FontSize += 5;
+                txtResult.FontSize += 1;
             if (changeValue == true)
             {
 
@@ -881,14 +881,14 @@ namespace Calculator
             if (txtResult.Text.Equals("" + 0) || changeValue == true)
             {
                 txtResult.Text = String.Empty;
-                txtResult.FontSize = 60;
+                txtResult.FontSize = 30;
             }
             if (txtResult.Text.Length < 16)
             {
                 txtResult.Text += 0;
 
                 if (txtResult.Text.Length > 10 && txtResult.Text.Length <= 16)
-                    txtResult.FontSize -= 5;
+                    txtResult.FontSize -= 1;
             }
             userInput = Convert.ToDouble(txtResult.Text);
             changeValue = false;
